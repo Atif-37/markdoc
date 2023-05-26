@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@markdoc/markdoc": "latest",
+    "@markdoc/next.js": "latest",
+    "json2md": "^2.0.0",
+    "next": "latest",
+    "prismjs": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-icons": "^4.8.0",
+    "react-syntax-highlighter": "^15.5.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.16",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/react-syntax-highlighter": "^15.5.6",
+    "typescript": "latest"
+  }
+}
