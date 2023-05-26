@@ -13,6 +13,9 @@ Some useful links:
 
 
 ### PUT
+
+---
+
 #### /user/{username}
 
 
@@ -75,3 +78,38 @@ Markdoc uses a fully declarative approach to composition and flow control, where
 ### API Development for Everyone
 
 Simplify API development for users, teams, and enterprises with the Swagger open source and professional tool-set. Find out how Swagger can help you design and document your APIs at scale.
+
+
+
+
+# Capture a PaymentIntent
+
+Capture the funds of an existing uncaptured PaymentIntent when its status is `requires_capture`.
+
+Uncaptured PaymentIntents will be canceled a set number of days after they are created (7 by default).
+
+Learn more about [separate authorization and capture](https://stripe.com/docs/payments/place-a-hold-on-a-payment-method).
+
+&nbsp;
+
+## Parameters
+
+---
+
+**amount_to_capture** optional
+
+The amount to capture from the PaymentIntent, which must be less than or equal to the original amount. Any additional amount will be automatically refunded. Defaults to the full `amount_capturable` if not provided.
+
+---
+
+**metadata** optional dictionary
+
+Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.
+
+
+
+
+
+
+
+
