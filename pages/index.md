@@ -82,13 +82,13 @@ Simplify API development for users, teams, and enterprises with the Swagger open
 
 
 
-# Capture a PaymentIntent
+# Create a New Book
 
-Capture the funds of an existing uncaptured PaymentIntent when its status is `requires_capture`.
 
-Uncaptured PaymentIntents will be canceled a set number of days after they are created (7 by default).
+#### POST /v1/books
 
-Learn more about [separate authorization and capture](https://stripe.com/docs/payments/place-a-hold-on-a-payment-method).
+This endpoint is designed to add a new book to the catalog, effectively expanding the scope of the store's offerings. When adding a book, the system creates associations with an author and a genre, as well as details like title, brief description, price, cover image, and an ISBN.
+
 
 &nbsp;
 
@@ -96,20 +96,49 @@ Learn more about [separate authorization and capture](https://stripe.com/docs/pa
 
 ---
 
-**amount_to_capture** optional
+**title** 
+ 
+This refers to the name of the book, and should ideally capture the essence of the book's content, intriguing potential readers.
 
-The amount to capture from the PaymentIntent, which must be less than or equal to the original amount. Any additional amount will be automatically refunded. Defaults to the full `amount_capturable` if not provided.
 
 ---
 
-**metadata** optional dictionary
+**description**
 
-Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.
+This is a summary of the book's content, providing potential buyers a glimpse into the story or information contained within.
 
+---
 
+**price**
 
+This is the cost at which the book is available for sale.
 
+---
 
+**cover_image_url**
 
+This is the URL where the cover image of the book is hosted.
 
+---
 
+**isbn**
+
+This is the unique identifier assigned to each edition of the book.
+
+---
+
+**author_id**
+
+This identifier connects the book to its author.
+
+---
+
+**Genre_id**
+
+This identifier allows the book to be categorized by its genre.
+
+&nbsp;
+
+## Returns
+
+After successfully creating a new book, the response will be a `Book` Object representing the book. This object will contain all the attributes of the book, including its unique ID, title, description, price, cover image URL, ISBN, author ID, and genre ID.

@@ -33,15 +33,16 @@ import { Callout, NewCallOut } from "../components";
       {% callout title="RESPONSE" desc="abc" icon="note" %}
     
 {
-  "id": 10,
-  "username": "theUsername",
-  "firstName": "John",
-  "lastName": "James",
-  "email": "john@email.com",
-  "password": "12345",
-  "phone": "12345",
-  "userStatus": 1
+  "id": "book_7g8h9i",
+  "title": "A Great Book",
+  "description": "This is a really great book",
+  "price": 19.99,
+  "cover_image_url": "https://example.com/images/a_great_book.jpg",
+  "isbn": "978-3-16-148410-0",
+  "author_id": "auth_1a2b3c",
+  "genre_id": "genre_4d5e6f"
 }
+
     
       {% /callout %}
       `;
@@ -50,20 +51,16 @@ import { Callout, NewCallOut } from "../components";
       {% callout title="PUT " desc="/v2/user/theUsername" icon="note" %}
     
     
- curl -X 'PUT' \
-  'https://petstore.swagger.io/v2/user/theUsername' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "id":10,
-  "username": "theUsername",
-  "firstName": "John",
-  "lastName": "James",
-  "email": "john@email.com",
-  "password": "12345",
-  "phone": "12345",
-  "userStatus": 1
-}'
+ curl -X POST -H "Content-Type: application/json" -d \
+  '{"title": "A Great Book", 
+    "description": "This is a really great book", 
+    "price": 19.99, 
+    "cover_image_url": "https://example.com/images/a_great_book.jpg", 
+    "isbn": "978-3-16-148410-0", 
+    "author_id": "auth_1a2b3c", 
+    "genre_id": "genre_4d5e6f"
+  }' 
+
     
       {% /callout %}
       `;
