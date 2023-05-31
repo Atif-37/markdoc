@@ -1,9 +1,6 @@
 import { parseJSON } from "jquery";
 import * as React from "react";
-import { AiFillEdit } from "react-icons/ai";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { useEffect, useState } from 'react';
-import { inspect } from 'util' // or directly
 // or 
 var util = require('util')
 export function CallOutCollaps({ title, children }) {
