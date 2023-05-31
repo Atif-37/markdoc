@@ -3,35 +3,35 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 let data = [
   {
-    heading: "Tax Heading",
+    heading: "Book",
     collapsed: false,
     data: [
       {
-        title: "Tax Calculations",
+        title: "Book Title 1",
         selected: true,
         links: [
           {
-            href: "/docs",
-            children: "The calculation object",
+            href: "/books/child1",
+            children: "Book Child 1",
           },
           {
-            href: "/books",
-            children: "Calculate tax",
+            href: "/books/child2",
+            children: "Book Child 2",
           },
         ],
       },
       {
-        title: "Tax Transactions",
+        title: "Book Title 2",
         selected: false,
 
         links: [
           {
-            href: "/docs",
-            children: "The transaction object",
+            href: "/books/child1",
+            children: "Book Child 1",
           },
           {
-            href: "/books",
-            children: "Retrieve a transaction",
+            href: "/books/child2",
+            children: "Book Child 2",
           },
         ],
       },
@@ -39,34 +39,34 @@ let data = [
   },
 
   {
-    heading: "Tax",
+    heading: "Author",
     collapsed: true,
     data: [
       {
-        title: "Tax Calculations",
+        title: "Author Title 1",
         selected: false,
         links: [
           {
-            href: "/docs",
-            children: "The calculation object",
+            href: "/author/child1",
+            children: "Author Child 1",
           },
           {
-            href: "/books",
-            children: "Calculate tax",
+            href: "/author/child2",
+            children: "Author Child 2",
           },
         ],
       },
       {
-        title: "Tax Transactions",
+        title: "Author Title 2",
         selected: false,
         links: [
           {
-            href: "/docs",
-            children: "The transaction object",
+            href: "/author/child1",
+            children: "Author Child 3",
           },
           {
-            href: "/books",
-            children: "Retrieve a transaction",
+            href: "/author/child2",
+            children: "Author Child 4",
           },
         ],
       },
